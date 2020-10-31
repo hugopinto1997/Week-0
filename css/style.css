@@ -1,0 +1,254 @@
+
+body {
+    background: linear-gradient(to right, #ff00bf 0%, #c61aff 80%);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-flow: row wrap;
+}
+
+.navbar > .navItem {
+    flex: 1;
+    list-style-type: none;
+    background-color: #ffb31a;
+    padding: 8px 10px;
+    margin: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar > .navItem > a {
+    text-decoration: none;
+    font-size: 1em;
+    overflow: hidden;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+.jumbotron {
+    display: grid;
+    margin: 10px 5px;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "picture picture prices"
+                         "picture picture prices"
+                         "picture picture prices";
+}
+
+.jumbotron > .div_image {
+    grid-area: picture;
+    background-image: url(https://thumbs.dreamstime.com/z/soft-beef-tacos-fries-four-mexican-street-tacos-fish-barbacoa-carnitas-shot-panoramic-composition-top-176661383.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    min-height: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    align-items: flex-start;
+}
+
+.div_prices{
+    grid-area: prices;
+    min-height: 20vw;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.price-detail {
+    flex: 1;
+    display: flex;
+    min-width: 0;
+    margin: 10px 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffb31a;
+}
+
+
+.price-detail > p {
+    color: black;
+    font-size: .5em;
+    text-align: center;
+    margin: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', Arial, sans-serif;
+}
+
+.price-detail > h1 {
+    color: black;
+    font-size: 3em;
+    font-weight: 300;
+    margin: 0px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -2px;
+}
+
+.div_image > h1,
+.div_image > h2 {
+    background-color: #ffb31a;
+    color: black;
+    font-weight: bold;
+}
+
+.div_image > h1 {
+    font-size: 2em;
+    padding: 5px 10px;
+    margin: 10px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -2px;
+}
+
+.div_image > h2 {
+    font-size: 1em;
+    padding: 5px 10px;
+    margin: 20px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: -1px;
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body{
+        background: green;
+    }
+    .navbar > .navItem > a {
+        font-size: .5em;
+    }
+    .jumbotron{
+        grid-template-areas:  "picture picture picture"
+                              "picture picture picture"
+                              "prices prices prices";
+    }
+    .div_prices {
+        min-height: 50vw;
+        flex-flow: column nowrap;
+    }
+    .price-detail > p {
+        font-size: .3em;
+    }
+    .price-detail > h1 {
+        font-size: 2em;
+    }
+    .div_image > h1 {
+        font-size: 1.25em;
+    }
+    .div_image > h2 {
+        font-size: .75em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body{
+        background: white;
+    }
+    .jumbotron{
+        grid-template-areas:  "picture picture picture"
+                              "picture picture picture"
+                              "prices prices prices";
+    }
+    .div_prices {
+        min-height: 30vw;
+        flex-flow: row nowrap;
+    }
+    .price-detail > p {
+        font-size: .5em;
+    }
+    .price-detail > h1 {
+        font-size: 3em;
+    }
+    .div_image > h1 {
+        font-size: 2em;
+    }
+    .div_image > h2 {
+        font-size: 1em;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body{
+        background: black;
+    }
+    .navbar > .navItem > a {
+        font-size: 1em;
+    }
+    .jumbotron{
+        grid-template-areas:  "picture picture picture"
+                              "picture picture picture"
+                              "prices prices prices";
+    }
+    .div_prices {
+        min-height: 20vw;
+        flex-flow: row nowrap;
+    }
+    .price-detail > p {
+        font-size: .5em;
+    }
+    .price-detail > h1 {
+        font-size: 3em;
+    }
+    .div_image > h1 {
+        font-size: 2em;
+    }
+    .div_image > h2 {
+        font-size: 1em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body{
+        background: red;
+    }
+    .navbar > .navItem > a {
+        font-size: 1em;
+    }
+    .jumbotron{
+        grid-template-areas:  "picture picture prices"
+                              "picture picture prices"
+                              "picture picture prices";
+    }
+    .div_prices {
+        min-height: 20vw;
+        flex-flow: column nowrap;
+    }
+    .price-detail > p {
+        font-size: .5em;
+    }
+    .price-detail > h1 {
+        font-size: 3em;
+    }
+    .div_image > h1 {
+        font-size: 2em;
+    }
+    .div_image > h2 {
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+
+
+
+
